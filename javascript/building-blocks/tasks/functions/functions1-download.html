@@ -21,16 +21,20 @@
     <section class="preview">
 
 
-
     </section>
 
   </body>
   <script>
     const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
     const para = document.createElement('p');
+    
 
     // Add your code here
-
+    function chooseName() {
+      const randName = names[Math.floor(Math.random()*7)];
+      para.textContent = randName;
+    }
+    chooseName();
     // Don't edit the code below here!
 
     const section = document.querySelector('section');

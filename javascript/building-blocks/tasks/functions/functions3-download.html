@@ -30,6 +30,20 @@
     const para = document.createElement('p');
 
     // Add your code here
+    const min = 1;
+    const max = 5;
+
+    const random = function(min, max) {
+      rand = Math.floor(min + (Math.random()*(max-min+1)));
+      return rand;
+    };
+    console.log(random(min,max));
+
+    const chooseName = function(array) {
+      const randName = array[random(0, array.length)];
+      para.textContent = randName;
+    };
+    chooseName(names);
 
     // Don't edit the code below here!
 
