@@ -26,7 +26,7 @@
 
   </body>
   <script>
-    let i = 500;
+    let userInput = 700;
     const para = document.createElement('p');
 
     function isPrime(num) {
@@ -41,7 +41,14 @@
 
 
     // Add your code here
-
+    for (let i = userInput; i > 1; i--) {
+      if (isPrime(i)) {
+        para.textContent += i + ', ';
+        
+      }
+      
+    }
+    para.textContent = 'The prime numbers from 2-' + userInput +  ' are: '  + para.textContent.slice(0, para.textContent.length -2) + '.';
 
     // Don't edit the code below here!
     const section = document.querySelector('section');
